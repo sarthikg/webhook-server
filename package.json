@@ -1,0 +1,29 @@
+{
+	"version": "0.0.0",
+	"author": { "email": "sarthikg@icloud.com" },
+	"description": "Webhook server for continuous deployments",
+	"devDependencies": {},
+	"engines": { "node": ">=18" },
+	"files": ["lib/", "package.json", "LICENSE.md", "README.md"],
+	"license": "MIT",
+	"lint-staged": { "*": "prettier --ignore-unknown --write" },
+	"main": "./lib/index.js",
+	"name": "webhook-server",
+	"packageManager": "pnpm@8.7.0",
+	"publishConfig": { "provenance": true },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sarthikg/webhook-server"
+	},
+	"scripts": {
+		"build": "tsup",
+		"format": "prettier \"**/*\" --ignore-unknown",
+		"lint": "eslint . .*js --max-warnings 0 --report-unused-disable-directives",
+		"lint:knip": "knip",
+		"prepare": "husky install",
+		"should-semantic-release": "should-semantic-release --verbose",
+		"test": "vitest",
+		"tsc": "tsc"
+	},
+	"type": "module"
+}
