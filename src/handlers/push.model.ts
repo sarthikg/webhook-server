@@ -21,3 +21,14 @@ export interface GitLabPushWebhook {
 	};
 	commits: GitLabCommit[];
 }
+
+interface GitLabCommit {
+	id: string;
+	message: string;
+	timestamp: string;
+	url: string;
+	author: {
+		name: string;
+		email: string;
+	};
+}
